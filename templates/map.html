@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_432ad84896f9408fb002eea690b55526 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_432ad84896f9408fb002eea690b55526" ></div>
+        
+</body>
+<script>    
+    
+            var map_432ad84896f9408fb002eea690b55526 = L.map(
+                "map_432ad84896f9408fb002eea690b55526",
+                {
+                    center: [-25.278055444434276, -57.58487367338524],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 3,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_84cd7a4478e3437c9661d3990defad2a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_432ad84896f9408fb002eea690b55526);
+        
+    
+            var feature_group_fb3c6fced1a844139c46355d9c67095f = L.featureGroup(
+                {}
+            ).addTo(map_432ad84896f9408fb002eea690b55526);
+        
+    
+            var feature_group_sub_group_8d937c7057a845a7b1380c584250afc0 = L.featureGroup.subGroup(
+                feature_group_fb3c6fced1a844139c46355d9c67095f
+            );
+            feature_group_sub_group_8d937c7057a845a7b1380c584250afc0.addTo(map_432ad84896f9408fb002eea690b55526);
+        
+    
+            var marker_a9945700a51c45acaa7962ccc6aba48e = L.marker(
+                [-34.63067536202156, -58.393375524326856],
+                {"parseHtml": true}
+            ).addTo(feature_group_sub_group_8d937c7057a845a7b1380c584250afc0);
+        
+    
+            var icon_31ac2c46b94f46fb84dbef296c0642d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "h-square", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a9945700a51c45acaa7962ccc6aba48e.setIcon(icon_31ac2c46b94f46fb84dbef296c0642d6);
+        
+    
+        var popup_14d39b00db8144b4952da77e558c7fcc = L.popup({"maxWidth": 500});
+
+        
+            var html_82f0390369af4e6baf3ce4bc6dd83ddf = $(`<div id="html_82f0390369af4e6baf3ce4bc6dd83ddf" style="width: 100.0%; height: 100.0%;"><b>Hospital de Pediatría Samic Prof. Dr Juan P.Garrahan</b><br><br>Pichincha 1890, C1245 CABA, Argentina<br>Argentina<br>telefono:4943-1455</div>`)[0];
+            popup_14d39b00db8144b4952da77e558c7fcc.setContent(html_82f0390369af4e6baf3ce4bc6dd83ddf);
+        
+
+        marker_a9945700a51c45acaa7962ccc6aba48e.bindPopup(popup_14d39b00db8144b4952da77e558c7fcc)
+        ;
+
+        
+    
+    
+            marker_a9945700a51c45acaa7962ccc6aba48e.bindTooltip(
+                `<div>
+                     Hospital de Pediatría Samic Prof. Dr Juan P.Garrahan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e4fa59ce8464f10856938b8663a7153 = L.marker(
+                [-34.62880005967246, -58.37656644894914],
+                {"parseHtml": true}
+            ).addTo(feature_group_sub_group_8d937c7057a845a7b1380c584250afc0);
+        
+    
+            var icon_47de27c4e8f441a7a860d9c776f48ebc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "h-square", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_7e4fa59ce8464f10856938b8663a7153.setIcon(icon_47de27c4e8f441a7a860d9c776f48ebc);
+        
+    
+        var popup_eb8f9f83cf2942c186e9df6dae6db4a1 = L.popup({"maxWidth": 500});
+
+        
+            var html_0041e72dbe074e429111e7be235d9f21 = $(`<div id="html_0041e72dbe074e429111e7be235d9f21" style="width: 100.0%; height: 100.0%;"><b>Hospital General de Niños Pedro de Elizalde</b><br><br>Av. Montes de Oca 40, C1270 CABA, Argentina<br>Argentina<br>telefono:4363-2100</div>`)[0];
+            popup_eb8f9f83cf2942c186e9df6dae6db4a1.setContent(html_0041e72dbe074e429111e7be235d9f21);
+        
+
+        marker_7e4fa59ce8464f10856938b8663a7153.bindPopup(popup_eb8f9f83cf2942c186e9df6dae6db4a1)
+        ;
+
+        
+    
+    
+            marker_7e4fa59ce8464f10856938b8663a7153.bindTooltip(
+                `<div>
+                     Hospital General de Niños Pedro de Elizalde
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_sub_group_53230fcde4dd44b3bac226ed5321a880 = L.featureGroup.subGroup(
+                feature_group_fb3c6fced1a844139c46355d9c67095f
+            );
+            feature_group_sub_group_53230fcde4dd44b3bac226ed5321a880.addTo(map_432ad84896f9408fb002eea690b55526);
+        
+    
+            var marker_ccf0f14b9aa2456bbc53ee67cee6be36 = L.marker(
+                [-23.564956687509095, -46.719726160278455],
+                {"parseHtml": true}
+            ).addTo(feature_group_sub_group_53230fcde4dd44b3bac226ed5321a880);
+        
+    
+            var icon_a57e5b0b30434c0297ae29c9fa6fbe95 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "h-square", "iconColor": "white", "markerColor": "purple", "prefix": "fa"}
+            );
+            marker_ccf0f14b9aa2456bbc53ee67cee6be36.setIcon(icon_a57e5b0b30434c0297ae29c9fa6fbe95);
+        
+    
+        var popup_a9936f392fcf472c8550c069c628a61f = L.popup({"maxWidth": 500});
+
+        
+            var html_766c003c8d9c4a1894246b5ff9712396 = $(`<div id="html_766c003c8d9c4a1894246b5ff9712396" style="width: 100.0%; height: 100.0%;"><b>Hospital Vital Brasil</b><br><br>Av. Vital Brasil, 1500 - Butantã, São Paulo - SP, 05503-900, Brazil<br>Brazil<br>telefono:</div>`)[0];
+            popup_a9936f392fcf472c8550c069c628a61f.setContent(html_766c003c8d9c4a1894246b5ff9712396);
+        
+
+        marker_ccf0f14b9aa2456bbc53ee67cee6be36.bindPopup(popup_a9936f392fcf472c8550c069c628a61f)
+        ;
+
+        
+    
+    
+            marker_ccf0f14b9aa2456bbc53ee67cee6be36.bindTooltip(
+                `<div>
+                     Hospital Vital Brasil
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_sub_group_7515199b38424c4b8a072ac41cc05e72 = L.featureGroup.subGroup(
+                feature_group_fb3c6fced1a844139c46355d9c67095f
+            );
+            feature_group_sub_group_7515199b38424c4b8a072ac41cc05e72.addTo(map_432ad84896f9408fb002eea690b55526);
+        
+    
+            var marker_422b348c6c7441cd88f28d637ed4879c = L.marker(
+                [4.714198434488104, -74.11337041755888],
+                {"parseHtml": true}
+            ).addTo(feature_group_sub_group_7515199b38424c4b8a072ac41cc05e72);
+        
+    
+            var icon_19858c89aede4c1dbc2ba82ffadaa419 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "h-square", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_422b348c6c7441cd88f28d637ed4879c.setIcon(icon_19858c89aede4c1dbc2ba82ffadaa419);
+        
+    
+        var popup_25c4bcfbe3a44ad4a88c41067871bcf3 = L.popup({"maxWidth": 500});
+
+        
+            var html_c1fd55dc200f4d78b4bf4f6cbe2be88b = $(`<div id="html_c1fd55dc200f4d78b4bf4f6cbe2be88b" style="width: 100.0%; height: 100.0%;"><b>Clinica Universitaria De Colombia</b><br><br>Cra. 99b ##72-39, Bogotá, Colombia<br>Colombia<br>telefono:</div>`)[0];
+            popup_25c4bcfbe3a44ad4a88c41067871bcf3.setContent(html_c1fd55dc200f4d78b4bf4f6cbe2be88b);
+        
+
+        marker_422b348c6c7441cd88f28d637ed4879c.bindPopup(popup_25c4bcfbe3a44ad4a88c41067871bcf3)
+        ;
+
+        
+    
+    
+            marker_422b348c6c7441cd88f28d637ed4879c.bindTooltip(
+                `<div>
+                     Clinica Universitaria De Colombia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var feature_group_sub_group_b05bd7863beb4971b206fa5219f4a451 = L.featureGroup.subGroup(
+                feature_group_fb3c6fced1a844139c46355d9c67095f
+            );
+            feature_group_sub_group_b05bd7863beb4971b206fa5219f4a451.addTo(map_432ad84896f9408fb002eea690b55526);
+        
+    
+            var marker_446ed54117ad446bb84edfae8b7ffa07 = L.marker(
+                [19.440471672550988, -99.12829254256968],
+                {"parseHtml": true}
+            ).addTo(feature_group_sub_group_b05bd7863beb4971b206fa5219f4a451);
+        
+    
+            var icon_e0096a5485bc4a74abbc19ecd9f823d0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "h-square", "iconColor": "white", "markerColor": "red", "prefix": "fa"}
+            );
+            marker_446ed54117ad446bb84edfae8b7ffa07.setIcon(icon_e0096a5485bc4a74abbc19ecd9f823d0);
+        
+    
+        var popup_6afd82fca311400db270a39124bcd894 = L.popup({"maxWidth": 500});
+
+        
+            var html_a8b54f63efd944c8bbc1bcf94bfda67c = $(`<div id="html_a8b54f63efd944c8bbc1bcf94bfda67c" style="width: 100.0%; height: 100.0%;"><b>Hospital General Gregorio Salas Flores</b><br><br>Calle del Carmen 42, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06020 Ciudad de México, CDMX, Mexico<br>México<br>telefono:</div>`)[0];
+            popup_6afd82fca311400db270a39124bcd894.setContent(html_a8b54f63efd944c8bbc1bcf94bfda67c);
+        
+
+        marker_446ed54117ad446bb84edfae8b7ffa07.bindPopup(popup_6afd82fca311400db270a39124bcd894)
+        ;
+
+        
+    
+    
+            marker_446ed54117ad446bb84edfae8b7ffa07.bindTooltip(
+                `<div>
+                     Hospital General Gregorio Salas Flores
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var tile_layer_9881497b4e964be4b6e0dc11e883d024 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_f6dcb902bfbb4b249fffc6e76a71c40a = new L.Control.MiniMap(
+                tile_layer_9881497b4e964be4b6e0dc11e883d024,
+                {"autoToggleDisplay": false, "centerFixed": false, "collapsedHeight": 25, "collapsedWidth": 25, "height": 150, "minimized": false, "position": "bottomright", "toggleDisplay": false, "width": 150, "zoomAnimation": false, "zoomLevelOffset": -5}
+            );
+            map_432ad84896f9408fb002eea690b55526.addControl(mini_map_f6dcb902bfbb4b249fffc6e76a71c40a);
+        
+    
+            var layer_control_78d59e13176b4c1f8b397b4bfe229771 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_84cd7a4478e3437c9661d3990defad2a,
+                },
+                overlays :  {
+                    "Argentina" : feature_group_sub_group_8d937c7057a845a7b1380c584250afc0,
+                    "Brazil" : feature_group_sub_group_53230fcde4dd44b3bac226ed5321a880,
+                    "Colombia" : feature_group_sub_group_7515199b38424c4b8a072ac41cc05e72,
+                    "M\u00e9xico" : feature_group_sub_group_b05bd7863beb4971b206fa5219f4a451,
+                },
+            };
+            L.control.layers(
+                layer_control_78d59e13176b4c1f8b397b4bfe229771.base_layers,
+                layer_control_78d59e13176b4c1f8b397b4bfe229771.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_432ad84896f9408fb002eea690b55526);
+        
+</script>
