@@ -43,7 +43,6 @@ pandas @ file:///C:/ci/pandas_1608056614942/work
 protobuf==3.17.2
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycodestyle @ file:///tmp/build/80754af9/pycodestyle_1615748559966/work
 pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
 PyDrive==1.3.1
 pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1608055815057/work
