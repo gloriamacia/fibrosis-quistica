@@ -5,6 +5,7 @@
 {% endblock %}
 
 {% block content %}
+
 <section id='welcome'>
   <div class="jumbotron bg-light">
     <h3 class="display-4"> Encuentra tu especialista y centro de Fibrosis Quística</h3>
@@ -64,7 +65,7 @@
         <div class="card shadow-sm">
           <img width="100%" height="225" src="../static/images/mexico-filip-gielda-VPavA7BBxK0-unsplash.jpg" alt="">
           <div class="card-body">
-            <h5 class="card-title">Mexico</h5>
+            <h5 class="card-title">México</h5>
             <br>
             <div class="btn-group">
                 <button type="button" class="btn btn-sm btn-outline-secondary">Especialistas</button>
@@ -213,7 +214,7 @@
       </div>
       <div class="form-check">
         <input type="checkbox" class="form-check-input" id="privacyCheck" required>
-        <label class="form-check-label" for="privacyCheck">acepto la política de protección de datos</label>
+        <label class="form-check-label" for="privacyCheck">acepto la <a href="{{url_for('privacy')}}">política de protección de datos</a></label>
       </div>
       <div class="row">
         <button type="submit" class="btn btn-primary">Enviar</button>
