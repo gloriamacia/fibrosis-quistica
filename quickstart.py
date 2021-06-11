@@ -2,13 +2,15 @@
 import pandas as pd
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from os.path import join, dirname, realpath
 
 def get_gspread(sheet_name):
     # define the scope
     scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
 
     # add credentials to the account
-    creds = ServiceAccountCredentials.from_json_keyfile_name('gsheet-db-315813-460e33e04984.json', scope)
+    UPLOADS_PATH = join(dirname(realpath(__file__)), 'gsheet-db-315813-460e33e04984.json')
+    creds = ServiceAccountCredentials.from_json_keyfile_name(UPLOADS_PATH, scope)
 
     # authorize the clientsheet 
     client = gspread.authorize(creds)

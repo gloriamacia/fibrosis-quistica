@@ -6,176 +6,232 @@
 
 {% block content %}
 
-<section id='welcome'>
-  <div class="jumbotron bg-light">
-    <h3 class="display-4"> Encuentra tu especialista y centro de Fibrosis Quística</h3>
-    <p> Encuentra tu especialista y centro de Fibrosis Quística en Latinoamérica</p>
-</section>
+    <section id='welcome'>
+        <div class="jumbotron bg-light">
+            <h3 class="display-4"> Encuentra tu especialista y centro de Fibrosis Quística</h3>
+            <p> Encuentra tu especialista y centro de Fibrosis Quística en Latinoamérica</p>
+    </section>
 
 
-<section id='selector'>
-  <div class="album py-5 bg-light">
-      <div class="container">
-
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <div class="col">
-            <div class="card shadow-sm">
-              <img width="100%" height="225" src="../static/images/argentina-barbara-zandoval-fl3fdbbtj4Q-unsplash.jpg" class="card-img-top" alt="..." >
-              <div class="card-body">
-                  <h5 class="card-title">Argentina</h5>
-                  <br>
-                  <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Especialistas</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Centros</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Asociaciones de pacientes</button>
-                    </div>
-              </div>
+    <section id='selector' style="background-color: #f7f7f7">
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <input class="form-control" id="myFilter" onkeyup="myFunction()" placeholder="Search for names.."
+                       type="text">
             </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <img width="100%" height="225" src="../static/images/colombia-saul-mercado-LFuFLGo_3ME-unsplash.jpg" alt="">
-              <div class="card-body">
-                <h5 class="card-title">Colombia</h5>
-                <br>
-                <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Especialistas</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Centros</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Asociaciones de pacientes</button>
-                  </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <img width="100%" height="225" src="../static/images/brazil-raphael-nogueira-OkiDIla7K8Q-unsplash.jpg" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Brazil</h5>
-              <br>
-              <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Especialistas</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Centros</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Asociaciones de pacientes</button>
-                </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="card shadow-sm">
-          <img width="100%" height="225" src="../static/images/mexico-filip-gielda-VPavA7BBxK0-unsplash.jpg" alt="">
-          <div class="card-body">
-            <h5 class="card-title">México</h5>
             <br>
-            <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Especialistas</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Centros</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary">Asociaciones de pacientes</button>
-              </div>
+            <div class="container" style="background-color: #f7f7f7 !important;">
+
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"
+                     style="background-color: #f7f7f7 !important;" id="myItems">
+                    <div class="col" style="background-color: #f7f7f7 !important;">
+                        <div class="card shadow-sm" style="background-color: #f7f7f7 !important;">
+                            <img width="100%" height="225"
+                                 src="../static/images/argentina-barbara-zandoval-fl3fdbbtj4Q-unsplash.jpg"
+                                 class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Argentina</h5>
+                                <br>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Especialistas
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Centros</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Asociaciones de
+                                        pacientes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img width="100%" height="225"
+                                 src="../static/images/colombia-saul-mercado-LFuFLGo_3ME-unsplash.jpg" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Colombia</h5>
+                                <br>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Especialistas
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Centros</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Asociaciones de
+                                        pacientes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img width="100%" height="225"
+                                 src="../static/images/brazil-raphael-nogueira-OkiDIla7K8Q-unsplash.jpg" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">Brazil</h5>
+                                <br>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Especialistas
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Centros</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Asociaciones de
+                                        pacientes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img width="100%" height="225"
+                                 src="../static/images/mexico-filip-gielda-VPavA7BBxK0-unsplash.jpg" alt="">
+                            <div class="card-body">
+                                <h5 class="card-title">México</h5>
+                                <br>
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Especialistas
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Centros</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Asociaciones de
+                                        pacientes
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+                                 xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail"
+                                 preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect>
+                                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+                            </svg>
+
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-muted">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+    </section>
 
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
+    <h3 class="display-4" id='centers'> Centros </h3>
+    {% include "map.html" %}
+    <br>
+    <br>
+    <section id='specialists' style="background-color: #f7f7f7 !important; ">
+        <div class="container-fluid bg-light">
+            <h3 class="display-4" id='centers'> Especialistas </h3>
+            <br>
+            <div class="table-responsive">
+                {% include "df_specialists.html" %}
             </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-              <div class="card-body">
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                  </div>
-                  <small class="text-muted">9 mins</small>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-  </div>
-</section>
+    </section>
+    <br>
+    <br>
 
-<h3 class="display-4" id='centers'> Centros </h3>
-{% include "map.html" %}
-<br>
-<br>
-<section id='specialists'>
-<div class="container bg-light">
-  <h3 class="display-4" id='centers'> Especialistas </h3>
-  <br>
-  {% include "df_specialists.html" %}
-</div>
-</section>
-<br>
-<br>
-
-<!-- 
+    <!--
 <section id="associations">
   <div class="container bg-light">
     <h3 class="display-4" id='centers'> Asociaciones de Pacientes </h3>
@@ -185,41 +241,65 @@
 </section>
 -->
 
-<br>
-<br>
-<section id='contact'>
-  <div class="row col-6">
-    <h3 class="display-4" id='centers'> Contacto </h3>
     <br>
-    <form action="https://formsubmit.co/gloriamaciamunoz@gmail.com" method="POST">
-      <div class="row py-4">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Nombre" name="firstname" required>
-        </div>
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Apellidos" name="lastname" required>
-        </div>
-      </div>
-      <div class="row py-4">
-        <div class="col">
-          <input type="text" class="form-control" placeholder="Pais" name="country" required>
+    <br>
+    <section id='contact' style="background-color: #f7f7f7">
+        <div class="container">
+            <div class="row" style="alignment: center">
+                <h3 class="display-4" style="text-align: center" id='centers'> Contacto </h3>
+                <br>
+                <form action="https://formsubmit.co/gloriamaciamunoz@gmail.com" method="POST">
+                    <div class="row py-4">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nombre" name="firstname" required>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Apellidos" name="lastname" required>
+                        </div>
+                    </div>
+                    <div class="row py-4">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Pais" name="country" required>
 
+                        </div>
+                        <div class="col">
+                            <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        </div>
+                    </div>
+                    <div class="row py-4">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="container" style="text-align: center">
+                        <div class="form-check d-flex justify-content-center">
+                            <div><input type="checkbox" class="form-check-input" id="privacyCheck" required></div>
+                            <div><label class="form-check-label" for="privacyCheck">acepto la <a
+                                    href="{{ url_for('privacy') }}">política de protección de datos</a></label></div>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+
+                    </div>
+                    <br>
+                </form>
+            </div>
         </div>
-        <div class="col">
-            <input type="email" class="form-control" name="email" placeholder="Email" required>
-        </div>
-      </div>
-      <div class="row py-4">
-        <textarea class="form-control" rows="3"></textarea>
-      </div>
-      <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="privacyCheck" required>
-        <label class="form-check-label" for="privacyCheck">acepto la <a href="{{url_for('privacy')}}">política de protección de datos</a></label>
-      </div>
-      <div class="row">
-        <button type="submit" class="btn btn-primary">Enviar</button>
-      </div>
-    </form>
-  </div>
-</section>
+    </section>
+
+    <script>
+        function myFunction() {
+            var input, filter, cards, cardContainer, title, i;
+            input = document.getElementById("myFilter");
+            filter = input.value.toUpperCase();
+            cardContainer = document.getElementById("myItems");
+            cards = cardContainer.getElementsByClassName("card");
+            for (i = 0; i < cards.length; i++) {
+                title = cards[i].querySelector(".card-body");
+                if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+                    cards[i].style.display = "";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 {% endblock %}

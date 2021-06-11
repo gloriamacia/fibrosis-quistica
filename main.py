@@ -3,6 +3,7 @@ import pandas as pd
 import folium
 from quickstart import get_gspread
 import folium.plugins
+from os.path import join, dirname, realpath
 
 app = Flask(__name__)
 
@@ -36,23 +37,30 @@ def index():
     minimap = folium.plugins.MiniMap()
     folium_map.add_child(minimap)
     folium.LayerControl().add_to(folium_map)
-    
-    folium_map.save('templates/map.html')
+
+    maproute = join(dirname(realpath(__file__)), 'templates/map.html')
+    folium_map.save(maproute)
+
+    dfspec = join(dirname(realpath(__file__)), 'templates/df_specialists.html')
+    dfasoc = join(dirname(realpath(__file__)), 'templates/df_associations.html')
 
     df_specialists = get_gspread('specialists')
     df_specialists = df_specialists.head()
     # https://stackoverflow.com/questions/61740225/bootstrap-css-and-pandas-dataframe-to-html-how-to-add-class-to-thead
-    df_specialists.to_html(classes=['table'], buf=open('templates/df_specialists.html', 'w', encoding="utf-8"))
+    df_specialists.to_html(classes=['table'], buf=open(dfspec, 'w', encoding="utf-8"))
     
     df_associations = get_gspread('associations')
     # https://stackoverflow.com/questions/61740225/bootstrap-css-and-pandas-dataframe-to-html-how-to-add-class-to-thead
-    df_associations.to_html(classes=['table'], buf=open('templates/df_associations.html', 'w', encoding="utf-8"))
+    df_associations.to_html(classes=['table'], buf=open(dfasoc, 'w', encoding="utf-8"))
 
     return render_template('index.html')
 
 @app.route('/politica-de-privacidad')
 def privacy():
     return render_template('privacy_policy.html')
+
+def home():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
